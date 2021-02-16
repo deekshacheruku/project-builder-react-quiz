@@ -1,0 +1,23 @@
+.container1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+}
+
+.header{
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.playbutton{
+    height:40px;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgb(30, 182, 30);
+    color: white;
+}

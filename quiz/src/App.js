@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import HomeComponent from "./components/HomeComponent.jsx";
+import QuizComponent from "./components/QuizComponent.jsx";
+import ResultComponent from "./components/ResultComponent.jsx";
 import './App.css';
+
+//Replace the componennt names to view the output.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <HomeComponent/> */}
+      {/* <QuizComponent/> */}
+      <ResultComponent/>
     </div>
   );
 }
