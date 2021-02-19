@@ -1,0 +1,130 @@
+[
+    {
+        "question": " ",
+        "optionA": " ",
+        "optionB": " ",
+        "optionC": " ",
+        "optionD": " ",
+        "answer": " "
+    },
+    {
+        "question": "Which is the only mammal that can’t jump?",
+       "optionA": "Dog",
+       "optionB": "Elephant",
+        "optionC": "Goat",
+       "optionD": "Lion",
+       "answer": "Elephant"
+   },
+   {
+        "question": "Which state produces maximum soybean?",
+        "optionA": "Madhya Pradesh",
+        "optionB": "Uttar Pradesh",
+        "optionC": "Bihar",
+        "optionD": "Rajasthan",
+        "answer": "Madhya Pradesh"
+    },
+    {
+        "question": "Which country operationalized world’s largest radio telescope?",
+        "optionA": "USA",
+        "optionB": "China",
+        "optionC": "Russia",
+        "optionD": "India",
+        "answer": "China"
+    },
+    {
+        "question": "Which of the following is the capital of Arunachal Pradesh?",
+        "optionA": "Itanagar",
+        "optionB": "Dispur",
+        "optionC": "Imphal",
+        "optionD": "Panaji",
+        "answer": "Itanagar"
+    },
+    {
+        "question": "Which one among the following radiations carries maximum energy?",
+        "optionA": "Ultraviolet rays",
+        "optionB": "Gamma rays",
+        "optionC": "X- rays",
+        "optionD": "Infra-red rays",
+        "answer": "Gamma rays"
+    },
+    {
+        "question": "Which of the following states is not located in the North?",
+        "optionA": "Jharkhand",
+        "optionB": "Jammu and Kashmir",
+        "optionC": "Himachal Pradesh",
+        "optionD": "Haryana",
+        "answer": "Jharkhand"
+    },
+    {
+        "question": "India’s first satellite of 2020 GSAT-30 was successfully launched is a",
+        "optionA": "Remote Sensing Satellite",
+        "optionB": "Communication Satelite",
+        "optionC": "Spy Satellite",
+        "optionD": "Metrological Satellite",
+        "answer": "Communication Satelite"
+    },
+    {
+        "question": "In which state is the main language Khasi?",
+        "optionA": "Mizoram",
+        "optionB": "Nagaland",
+        "optionC": "Meghalaya",
+        "optionD": "Tripura",
+        "answer": "Meghalaya"
+    },
+    {
+        "question": "The head quarters of world trade organization is in",
+        "optionA": "Montreal",
+        "optionB": "Seattle",
+        "optionC": "Geneva",
+        "optionD": "Hague",
+        "answer": "Geneva"
+    },
+    {
+        "question": "Which is the largest coffee producing state of India?",
+        "optionA": "Kerala",
+        "optionB": "Tamil Nadu",
+        "optionC": "Karnataka",
+        "optionD": "Arunachal Pradesh",
+        "answer": "Karnataka"
+    },
+    {
+        "question": "Which is the only mammal that can’t jump?",
+        "optionA": "Dog",
+        "optionB": "Elephant",
+        "optionC": "Goat",
+        "optionD": "Lion",
+        "answer": "Elephant"
+    },
+    {
+        "question": "The 2014 football world cup is scheduled to be held in",
+        "optionA": "China",
+        "optionB": "Australia",
+        "optionC": "Japan",
+        "optionD": "Brazil",
+        "answer": "Brazil"
+    },
+    {
+        "question": "Which state has the largest population?",
+        "optionA": "Uttar Pradesh",
+        "optionB": "Maharastra",
+        "optionC": "Bihar",
+        "optionD": "Andra Pradesh",
+        "answer": "Uttar Pradesh"
+    },
+    {
+        "question": "The language spoken by the people by Pakistan is ?",
+        "optionA": "Hindi",
+        "optionB": "Palauan",
+        "optionC": "Sindhi",
+        "optionD": "Nauruan",
+        "answer": "Sindhi"
+    },
+    {
+        "question": "The metal whose salts are sensitive to light is",
+        "optionA": "Silver",
+        "optionB": "Zinc",
+        "optionC": "Copper",
+        "optionD": "Gold",
+        "answer": "Silver"
+    }
+]
