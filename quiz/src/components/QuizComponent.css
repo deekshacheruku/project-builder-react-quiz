@@ -1,4 +1,4 @@
-.container2,.quizheader,.subcontainer1,.noofquestion,.question,.optionbutton,.subcontainer2{
+.container2,.quizheader,.subcontainer1,.noofquestion,.question,.optionbutton,.subcontainer2,#answerbutton{
     background-color: white;
 }
 
@@ -47,6 +47,7 @@
     width: 1050px;
     height: 140px;
     margin-left: 30px;
+    outline:none
 }
 
 button{
@@ -57,6 +58,7 @@ button{
     margin-left:30px;
     border: 0px solid transparent;
     color: lightcyan;
+    outline:none
 }
 
 .subcontainer2{
@@ -68,6 +70,7 @@ button{
     background-color: rgb(50, 50, 216);
     width: 100px;
     height: 30px;
+    outline:none
 }
 
 .nextbutton{
@@ -76,4 +79,27 @@ button{
 
 .quitbutton{
     background-color: red;
+    outline:none
+}
+
+.correctbutton,.wrongbutton{
+    width: 150px;
+    height: 28px;
+    border-radius: 8px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 5px; 
+}
+
+.correctbutton{
+    background-color: green;
+}
+
+.wrongbutton{
+    background-color: red;
+}
+
+.changecolor{
+    background-color: gray;
 }
