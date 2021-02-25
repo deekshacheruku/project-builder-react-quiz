@@ -1,4 +1,4 @@
-.container2,.quizheader,.subcontainer1,.noofquestion,.question,.optionbutton,.subcontainer2,#answerbutton{
+.container2,.quizheader,.subcontainer1,.noofquestion,.question,.optionbutton,.subcontainer2,#answerbutton,.timer,span{
     background-color: white;
 }
 
@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1000px;
+    width: 950px;
     margin-bottom: 15px;
 }
 
@@ -64,6 +64,10 @@ button{
 .subcontainer2{
     display: flex;
     flex-direction: row;
+}
+
+.timer{
+    padding-right: 10px;
 }
 
 .previousbutton, .nextbutton, .quitbutton{
