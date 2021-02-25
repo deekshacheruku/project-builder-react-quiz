@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './QuizComponent.css';
 import ReactDOM from 'react-dom'
-import Questions from "../resources/questions.json"
 import Service from"./Service.js"
 import ResultComponent from './ResultComponent';
 import Countdown from "react-countdown";
+
 
 class QuizComponent extends Component {
     constructor(){
         super();
         this.state = {
             currentQuestionNumber : 1,
-        }
+            questionarray : Service.questionArray
+        }        
     }
 
     OnClickPreviousButtonHandler = () =>{
@@ -30,7 +31,7 @@ class QuizComponent extends Component {
     }
 
     OnClickNextButtonHandler = () =>{
-        if(this.state.currentQuestionNumber < 15){
+        if(this.state.currentQuestionNumber < 10){
             let previousbtn = document.getElementById("previousbutton")
             previousbtn.setAttribute("class","previousbutton")
             this.setState(PreviousState => ({
@@ -42,14 +43,13 @@ class QuizComponent extends Component {
     }
 
     OnClickQuitButtonHandler = () =>{
-        // 0th element in json is for quit purpose
-        this.setState( { currentQuestionNumber : 0 } )
+        this.GameOver()
     }
 
-    OnClickButtonHandler = (event) =>{
+    OnClickAnswerButtonHandler = (event) =>{
         Service.attemptedQuestions = Service.attemptedQuestions + 1
         let UserAnswer = event.target.value
-        if(UserAnswer == Questions[this.state.currentQuestionNumber].answer){
+        if(UserAnswer == this.state.questionarray[this.state.currentQuestionNumber].answer){
             ReactDOM.render(<div className="correctbutton">Correct Answer!</div>,document.getElementById("answerbutton"))
             Service.correctQuestions = Service.correctQuestions + 1
         }
@@ -57,7 +57,7 @@ class QuizComponent extends Component {
             ReactDOM.render(<div className="wrongbutton">Wrong Answer!</div>,document.getElementById("answerbutton"))
             Service.wrongQuestions = Service.wrongQuestions + 1
         }
-        if(this.state.currentQuestionNumber == 15)
+        if(this.state.currentQuestionNumber == 10)
             this.GameOver()
         else{
             this.setState(PreviousState => ({
@@ -70,7 +70,6 @@ class QuizComponent extends Component {
 
     GameOver(){
         alert("Game is over!")
-        // this.setState( { currentQuestionNumber : 15 } )
         let quizdiv=document.getElementById("quiz")
         quizdiv.setAttribute("class","hide")
         ReactDOM.render(<ResultComponent></ResultComponent>,document.getElementById("result"))
@@ -93,15 +92,15 @@ class QuizComponent extends Component {
                 <div id="answerbutton"></div>
                 <h1 className="quizheader">Question</h1>
                 <div className="subcontainer1">
-                    <p className="noofquestion">{this.state.currentQuestionNumber} of 15</p>
-                    <p className="question">{Questions[this.state.currentQuestionNumber].question}</p>
+                    <p className="noofquestion">{this.state.currentQuestionNumber} of 10</p>
+                    <p className="question">{this.state.questionarray[this.state.currentQuestionNumber].question}</p>
                     <p className="timer"><Countdown date={Date.now() + 120000} renderer={this.renderer}></Countdown></p>
                 </div>
                 <div className="optionbutton">
-                    <button onClick={this.OnClickButtonHandler} value={Questions[this.state.currentQuestionNumber].optionA}> {Questions[this.state.currentQuestionNumber].optionA}</button>
-                    <button onClick={this.OnClickButtonHandler} value={Questions[this.state.currentQuestionNumber].optionB}> {Questions[this.state.currentQuestionNumber].optionB}</button>
-                    <button onClick={this.OnClickButtonHandler} value={Questions[this.state.currentQuestionNumber].optionC}> {Questions[this.state.currentQuestionNumber].optionC}</button>
-                    <button onClick={this.OnClickButtonHandler} value={Questions[this.state.currentQuestionNumber].optionD}> {Questions[this.state.currentQuestionNumber].optionD}</button>
+                    <button onClick={this.OnClickAnswerButtonHandler} value={this.state.questionarray[this.state.currentQuestionNumber].options[0]}> {this.state.questionarray[this.state.currentQuestionNumber].options[0]}</button>
+                    <button onClick={this.OnClickAnswerButtonHandler} value={this.state.questionarray[this.state.currentQuestionNumber].options[1]}> {this.state.questionarray[this.state.currentQuestionNumber].options[1]}</button>
+                    <button onClick={this.OnClickAnswerButtonHandler} value={this.state.questionarray[this.state.currentQuestionNumber].options[2]}> {this.state.questionarray[this.state.currentQuestionNumber].options[2]}</button>
+                    <button onClick={this.OnClickAnswerButtonHandler} value={this.state.questionarray[this.state.currentQuestionNumber].options[3]}> {this.state.questionarray[this.state.currentQuestionNumber].options[3]}</button>
                 </div>
                 <div className="subcontainer2">
                     <button className="previousbutton changecolor" id="previousbutton" onClick={this.OnClickPreviousButtonHandler}>Previous</button>

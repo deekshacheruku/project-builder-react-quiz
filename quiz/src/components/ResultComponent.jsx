@@ -10,13 +10,13 @@ class ResultComponent extends Component {
         this.correctQuestions = 0;
         this.wrongQuestions = 0;
         this.score = 0;
-        this.questions = 15;
+        this.questions = 10;
     }
     componentDidMount(){
         this.attemptedQuestions = Service.attemptedQuestions
         this.wrongQuestions = Service.wrongQuestions
         this.correctQuestions = Service.correctQuestions
-        this.score = Math.round((this.correctQuestions/15)*100)
+        this.score = Math.round((this.correctQuestions/10)*100)
         this.renderOutput()
     }
 
