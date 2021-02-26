@@ -5,7 +5,6 @@ import Service from"./Service.js"
 import ResultComponent from './ResultComponent';
 import Countdown from "react-countdown";
 
-
 class QuizComponent extends Component {
     constructor(){
         super();
@@ -75,16 +74,20 @@ class QuizComponent extends Component {
         ReactDOM.render(<ResultComponent></ResultComponent>,document.getElementById("result"))
     }
 
-    renderer = ({ minutes, seconds }) => {
-        if (seconds == 0 && minutes == 0) {
+    CountDownComplete = () => {
+        this.setState(PreviousState => ({
+            currentQuestionNumber : PreviousState.currentQuestionNumber + 1
+        }))
+        if(this.state.currentQuestionNumber == 10)
             this.GameOver()
-            return (<span></span>)
-        }
+    } 
+
+    renderer = ({ minutes, seconds}) => {
         if (seconds < 10)
             return ( <span>0{minutes}:0{seconds}</span> );
         else
             return ( <span>0{minutes}:{seconds}</span> );
-      };
+      }
 
     render() {
         return (
@@ -94,7 +97,7 @@ class QuizComponent extends Component {
                 <div className="subcontainer1">
                     <p className="noofquestion">{this.state.currentQuestionNumber} of 10</p>
                     <p className="question">{this.state.questionarray[this.state.currentQuestionNumber].question}</p>
-                    <p className="timer"><Countdown date={Date.now() + 120000} renderer={this.renderer}></Countdown></p>
+                    <p className="timer"> <Countdown  onComplete={this.CountDownComplete} date={Date.now() + 10000 } key={this.state.currentQuestionNumber} renderer={this.renderer}></Countdown></p>
                 </div>
                 <div className="optionbutton">
                     <button onClick={this.OnClickAnswerButtonHandler} value={this.state.questionarray[this.state.currentQuestionNumber].options[0]}> {this.state.questionarray[this.state.currentQuestionNumber].options[0]}</button>

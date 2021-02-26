@@ -2,7 +2,6 @@ import HomeComponent from "./components/HomeComponent.jsx";
 import Service from "./components/Service.js"
 import axios from "axios"
 import './App.css';
-
 import React, { Component } from 'react';
 
 class App extends Component {
