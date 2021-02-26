@@ -75,11 +75,13 @@ class QuizComponent extends Component {
     }
 
     CountDownComplete = () => {
-        this.setState(PreviousState => ({
-            currentQuestionNumber : PreviousState.currentQuestionNumber + 1
-        }))
         if(this.state.currentQuestionNumber == 10)
             this.GameOver()
+        else{
+            this.setState(PreviousState => ({
+                currentQuestionNumber : PreviousState.currentQuestionNumber + 1
+            }))
+        }
     } 
 
     renderer = ({ minutes, seconds}) => {
@@ -91,7 +93,7 @@ class QuizComponent extends Component {
 
     render() {
         return (
-            <div className="container2">
+            <div className="container2" >
                 <div id="answerbutton"></div>
                 <h1 className="quizheader">Question</h1>
                 <div className="subcontainer1">
